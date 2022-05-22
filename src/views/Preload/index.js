@@ -17,10 +17,10 @@ export default function Preload(){
                 await AsyncStorage.setItem('token', res.access_token)
                 navigation.navigate('Home')
               } else {
-                  navigation.navigate('Signin') //Token é inválido
+                  navigation.navigate('Login') //Token é inválido
               }
             } else { //Token não existe no AsyncStorage
-                  navigation.navigate('Signin')
+                  navigation.navigate('Login')
             }
         }
     checkToken()

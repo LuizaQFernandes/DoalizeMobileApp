@@ -6,17 +6,18 @@ const Stack = createNativeStackNavigator()
 import Home from '../views/Home'
 import Preload from '../views/Preload'
 import Login from '../views/Login'
+import Cadastro from '../views/Cadastro'
 //import Signup from '../views/Signup'
 
 export default function Navigation(){
     return(
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login"
+            <Stack.Navigator initialRouteName="PreLoad"
                              screenOptions={{headerShown:false}}>
             <Stack.Screen name="Preload" component={Preload} />
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Login" component={Login} />
-
+            <Stack.Screen name="Cadastro" component={Cadastro} />
             </Stack.Navigator>
         </NavigationContainer>
     )
