@@ -58,7 +58,6 @@ export default function Login(){
             <Container>
 
             <Logo/>
-
             <InputArea>
                 <Text>Email</Text>
                 <IconInput
@@ -74,10 +73,9 @@ export default function Login(){
                 />
             </InputArea>
             
-            <StyledButton text="Login" onPress={handleSignClick}/>
-      
-        
+            <StyledButton text="Login" onPress={handleSignClick}/>        
 
+           
         <StyledMessageButton onPress={handleMessageButtonClick} text="Ainda não é cadastrado?" textBold="Crie uma conta" />
             
         </Container>

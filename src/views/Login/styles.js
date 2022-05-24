@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 import themes from '../../themes'
 
 export const Container = styled.View`
-flex: 1;
+display: flex;
 align-items: center;
 justify-content: center;
 width: 75%

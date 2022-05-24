@@ -8,9 +8,9 @@ const InputArea = styled.View`
     align-items: center;
     margin-bottom: 16px;
     height: 76px;
-    width: 587px;
+    width: 100%;
     left: 0px;
-    top: 37px;
+    top: 4px;
     background:  ${themes.padrao.colors.branco};
     border: 1px solid ${themes.padrao.colors.middleBlack};
     border-radius: 19px;
