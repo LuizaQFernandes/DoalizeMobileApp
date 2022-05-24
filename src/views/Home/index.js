@@ -3,6 +3,7 @@ import {Container, Title} from './styles'
 import {StyledButton} from '../../components/styled/Others'
 import Api from '../../resources/api/Api'
 import { useNavigation, CommonActions } from '@react-navigation/native'
+import Image from '../../resources/svg/Foto'
 
 export default function Login(){
 
@@ -16,7 +17,7 @@ export default function Login(){
     return (
         <>
         <Container>
-        <Title>Home</Title>
+        <Image/>
         <StyledButton text="Logout" onPress={sair}/>
         </Container>
        </>

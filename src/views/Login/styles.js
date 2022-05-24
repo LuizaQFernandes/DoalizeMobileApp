@@ -5,6 +5,7 @@ export const Container = styled.View`
 flex: 1;
 align-items: center;
 justify-content: center;
+width: 75%
 `
 
 export const Title = styled.Text`
@@ -16,6 +17,5 @@ export const Text = styled.Text`
     margin-top: 15px;
     font-weight: 400;
     font-size: 24px;
-    line-height: 33px;
     color: ${themes.padrao.colors.middleBlack};
 `

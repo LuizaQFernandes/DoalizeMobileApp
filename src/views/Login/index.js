@@ -7,6 +7,7 @@ import { Alert, Platform } from 'react-native'
 import { useNavigation, CommonActions } from '@react-navigation/native'
 import Api from '../../resources/api/Api'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import Logo from '../../resources/svg/Logo.jsx'
 
 export default function Login(){
     
@@ -53,8 +54,11 @@ export default function Login(){
     return (
         <>
         <Sidebar/>
-        <Container>
-            <Title>Doalize</Title>
+
+            <Container>
+
+            <Logo/>
+
             <InputArea>
                 <Text>Email</Text>
                 <IconInput
@@ -68,9 +72,14 @@ export default function Login(){
                     value={senha}
                     onChangeText={t => setSenha(t)}
                 />
-                <StyledButton text="Login" onPress={handleSignClick}/>
             </InputArea>
-            <StyledMessageButton onPress={handleMessageButtonClick} text="Ainda não é cadastrado?" textBold="Crie uma conta" />
+            
+            <StyledButton text="Login" onPress={handleSignClick}/>
+      
+        
+
+        <StyledMessageButton onPress={handleMessageButtonClick} text="Ainda não é cadastrado?" textBold="Crie uma conta" />
+            
         </Container>
        </>
     )
