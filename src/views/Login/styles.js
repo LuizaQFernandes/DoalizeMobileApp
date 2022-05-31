@@ -2,10 +2,10 @@ import styled from 'styled-components/native'
 import themes from '../../themes'
 
 export const Container = styled.View`
-display: flex;
+flex: 1;
 align-items: center;
 justify-content: center;
-width: 75%
+margin-top: 5%;
 `
 
 export const Title = styled.Text`
@@ -16,6 +16,6 @@ font-size: 44px;
 export const Text = styled.Text`
     margin-top: 15px;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: ${themes.padrao.colors.middleBlack};
 `

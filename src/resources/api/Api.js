@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
-const BASE_API = "http://localhost:4000/api"
+const BASE_API = "https://doalize-backend.herokuapp.com/api"
 export default {
     checkToken:async(token) => {
       const req = await fetch(`${BASE_API}/usuarios/token`, {
@@ -41,4 +41,29 @@ export default {
     await AsyncStorage.removeItem('token')
     return null
   },
+  getCampanhas:async() => {
+    let token = await AsyncStorage.getItem('token')
+    const req = await fetch(`${BASE_API}/campanhas`,{
+        method: 'GET',
+        headers: {
+            Accept : 'application/json',
+            'Content-Type': 'application/json',
+            'x-access-token': token
+        }        
+    })
+    const json = await req.json()
+    return json   
+  }, 
+  CadastrarCampanha:async(titulo, endereco, sobre, dataInicio, dataTermino, categoria, voluntarios) => {
+    const req = await fetch(`${BASE_API}/campanhas`,{
+      method: 'POST',
+      headers: {
+          Accept : 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({titulo, endereco, sobre, dataInicio, dataTermino, categoria, voluntarios})
+  })
+  const json = await req.json()
+  return json      
+  }
 }

@@ -7,6 +7,8 @@ import Home from '../views/Home'
 import Preload from '../views/Preload'
 import Login from '../views/Login'
 import Cadastro from '../views/Cadastro'
+import Campanha from '../views/Campanha'
+
 //import Signup from '../views/Signup'
 
 export default function Navigation(){
@@ -18,6 +20,8 @@ export default function Navigation(){
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Cadastro" component={Cadastro} />
+            <Stack.Screen name="Campanha" component={Campanha} />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

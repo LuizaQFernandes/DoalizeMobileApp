@@ -51,7 +51,6 @@ export default function Cadastro(){
 
     return (
         <>
-        <Sidebar/>
         <Container>
             <Title>Cadastro</Title>
             <InputArea>
