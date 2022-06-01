@@ -54,16 +54,45 @@ export default {
     const json = await req.json()
     return json   
   }, 
-  CadastrarCampanha:async(titulo, endereco, sobre, dataInicio, dataTermino, categoria, voluntarios) => {
+  incluiCampanha:async(dadosCampanha) => {
+    let token = await AsyncStorage.getItem('token')
     const req = await fetch(`${BASE_API}/campanhas`,{
       method: 'POST',
       headers: {
           Accept : 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-access-token': token
       },
-      body: JSON.stringify({titulo, endereco, sobre, dataInicio, dataTermino, categoria, voluntarios})
+      body: JSON.stringify(dadosCampanha)
   })
   const json = await req.json()
   return json      
+  },
+  alteraCampanha:async(dadosCampanha) => {
+    let token = await AsyncStorage.getItem('token')
+    const req = await fetch(`${BASE_API}/campanhas`,{
+        method: 'PUT',
+        headers: {
+            Accept : 'application/json',
+            'Content-Type': 'application/json',
+            'x-access-token': token
+        },
+        body: JSON.stringify(dadosCampanha)        
+    })
+    const json = await req.json()
+    return json    
+  },
+  removeCampanha:async(idCampanha) => {
+    let token = await AsyncStorage.getItem('token')
+    const req = await fetch(`${BASE_API}/campanhas/${idCampanha}`,{
+        method: 'DELETE',
+        headers: {
+            Accept : 'application/json',
+            'Content-Type': 'application/json',
+            'x-access-token': token
+        }     
+    })
+    const json = await req.json()
+    return json 
   }
 }
