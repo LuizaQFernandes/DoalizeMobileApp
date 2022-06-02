@@ -14,6 +14,8 @@ const InputArea = styled.View`
     background:  ${themes.padrao.colors.branco};
     border: 1px solid ${themes.padrao.colors.middleBlack};
     border-radius: 19px;
+    padding-left: 5px;
+    padding-right: 5px;
 `
 
 const Input = styled.TextInput`
@@ -27,10 +29,11 @@ const BotaoTouch = styled.TouchableOpacity`
     padding-right: 8px; 
 `
 
-export default ({ placeholder, value, onChangeText, password}) => {
+export default ({ icon, placeholder, value, onChangeText, password}) => {
     const [senha, setSenha] = useState(password);
     return (
         <InputArea>
+        <MaterialCommunityIcons name={icon} size={30} color={themes.padrao.colors.middleBlack} />
             <Input
                 placeholder={placeholder}
                 placeholderTextColor={themes.padrao.colors.preto}

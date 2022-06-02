@@ -60,15 +60,18 @@ export default function Login(){
             <InputArea>
                 <Text>Email</Text>
                 <IconInput
+                    icon="email"
                     placeholder="Informe seu email"
                     value={email}
                     onChangeText={t => setEmail(t)}
                 />
                 <Text>Senha</Text>
                 <IconInput
+                    icon="lock"
                     placeholder="Informe sua senha"
                     value={senha}
                     onChangeText={t => setSenha(t)}
+                    password={true}
                 />
             </InputArea>
             

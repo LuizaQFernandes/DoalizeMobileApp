@@ -59,6 +59,7 @@ export default ({ route }) => {
     return(
         <>
             <View>
+                <NavBar/>
                 <Text>Cadastro de Campanhas</Text>
                 <Text style={styles.label}>Título</Text>
                 <TextInput
@@ -169,8 +170,7 @@ export default ({ route }) => {
                     color={themes.padrao.colors.amarelo}
                     accessibilityLabel='Cancelar'
                 />
-            </View>
-            
+            </View>  
         </>
     )
 }
