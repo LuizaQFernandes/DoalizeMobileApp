@@ -6,8 +6,6 @@ import themes from '../../themes'
 export const InputArea = styled.ScrollView`
 padding: 16px;
 width: 80%;
-margin-bottom: 32px;
-
 `
 
 const CustomButton = styled.TouchableOpacity`

@@ -5,13 +5,13 @@ export const Container = styled.View`
 flex: 1;
 align-items: center;
 justify-content: center;
-margin-top: 5%;
+margin-top: 80px
 `
 
 export const Title = styled.Text`
 color: ${props => props.theme.color};
 font-size: 44px; 
-
+margin-top: 8px;
 `
 export const Text = styled.Text`
     margin-top: 15px;

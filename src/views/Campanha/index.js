@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Text, TextInput, StyleSheet, Platform, ActivityIndicator, Button, View }
+import { Text, TextInput, StyleSheet, Platform, Button, View }
     from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 import themes from '../../themes'
 import Api from '../../resources/api/Api'
 import NavBar from '../../components/styled/NavBar'
+import {Container, Title} from './styles'
+import {InputArea} from '../../components/styled/Others'
 
 export default ({ route }) => {
     const navigation = useNavigation()
@@ -58,9 +59,13 @@ export default ({ route }) => {
 
     return(
         <>
+        <NavBar/>
+        <Container>
+        <Title>Campanha</Title>
+        <InputArea>
+        
             <View>
-                <NavBar/>
-                <Text>Cadastro de Campanhas</Text>
+                
                 <Text style={styles.label}>Título</Text>
                 <TextInput
                     name='titulo'
@@ -151,7 +156,12 @@ export default ({ route }) => {
                     placeholder='Aceita voluntários? Sim ou Não'
                     maxLength={3}
                 />
-                <Button
+
+            </View> 
+            </InputArea> 
+            </Container>
+
+            <Button
                     onPress={() => salvarCampanha(campanha)}
                     title='Salvar a Campanha'
                     color={themes.padrao.colors.rosa}
@@ -170,7 +180,6 @@ export default ({ route }) => {
                     color={themes.padrao.colors.amarelo}
                     accessibilityLabel='Cancelar'
                 />
-            </View>  
         </>
     )
 }
